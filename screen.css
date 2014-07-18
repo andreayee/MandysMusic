@@ -71,6 +71,7 @@ h3 {
   font-family: 'Ostrich Sans';
 }
 
+/*variable*/
 a {
   text-decoration: none;
   color: gray;
@@ -124,7 +125,6 @@ header nav :active {
   color: black;
 }
 
-/*gallery page*/
 @media only screen and (max-width: 749px) {
   .instrument {
     width: 100%;
@@ -163,20 +163,22 @@ header nav :active {
     padding-top: 100px;
   }
 
+  /*extend*/
+  .attachmentposition, div, section {
+    background-attachment: fixed;
+    background-position: center;
+  }
+
   div {
     background-color: rgba(255, 255, 255, 0.9);
     padding: 3% 15%;
     max-width: 2000px;
     background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
   }
 
   section {
     max-width: 2000px;
     background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
   }
 
   .container {
@@ -222,10 +224,12 @@ header nav :active {
     padding: 3% 3%;
   }
 
+  /*mixin*/
   /*Classes Page*/
   .recital {
-    background-image: url("photos/grouprecital.jpg");
     height: 600px;
+    background-image: url("photos/grouprecital.jpg");
+    /*height: 600px;*/
   }
 
   .classes-pipa {

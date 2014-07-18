@@ -37,20 +37,25 @@
 		padding-top: 100px;
 	}
 
+	/*extend*/
+
+	.attachmentposition {
+		background-attachment: fixed;
+		background-position: center;
+	}
+
 	div {
 		background-color: rgba(255,255,255,.9);
 		padding: 3% 15%;
 		max-width: 2000px;
 		background-size: cover; 
-	  	background-attachment: fixed;
-	  	background-position: center; 
+		@extend .attachmentposition
 	}
 
 	section {
 	  max-width: 2000px;
 	  background-size: cover; 
-	  background-attachment: fixed;
-	  background-position: center;
+	  @extend .attachmentposition
 	}
 
 	.container {
@@ -97,11 +102,17 @@
 			padding: 3% 3%;
 		}
 	}
+/*mixin*/
+	@mixin backgroundheight($imgheight) {
+		height: $imgheight;
+
+	}
 
 /*Classes Page*/
 	.recital {
+		@include backgroundheight(600px);
 		background-image: url('photos/grouprecital.jpg');
-		height: 600px;
+		/*height: 600px;*/
 	}
 
 	.classes-pipa {
